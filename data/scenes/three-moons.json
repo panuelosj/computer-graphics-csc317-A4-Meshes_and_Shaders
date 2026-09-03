@@ -1,0 +1,63 @@
+{
+  "name": "Three moons",
+  "description": "One planet, three moons at different orbital radii, speeds and colours. A good starting point for your own scene: each moon is just another object with its own transform list.",
+  "view": [0, 0.2, 1],
+  "camera": { "center": [0.0, 0.1885, -0.0377], "extent": 3.96 },
+  "light": { "type": "orbiting", "period": 10.0, "elevation": 0.35 },
+  "objects": [
+    {
+      "name": "planet",
+      "geometry": { "type": "sphere", "nu": 80, "nv": 52 },
+      "shading": { "type": "procedural", "bump": true },
+      "transform": [{ "scale": 0.9 }]
+    },
+    {
+      "name": "moon-inner",
+      "geometry": { "type": "sphere", "nu": 40, "nv": 28 },
+      "shading": {
+        "type": "blinn_phong",
+        "ka": [0.15, 0.05, 0.05],
+        "kd": [0.85, 0.35, 0.3],
+        "ks": [0.4, 0.4, 0.4],
+        "phong_exponent": 80
+      },
+      "transform": [
+        { "rotate_about_y": 0, "period": 3.0 },
+        { "translate": [1.6, 0.15, 0.0] },
+        { "scale": 0.18 }
+      ]
+    },
+    {
+      "name": "moon-middle",
+      "geometry": { "type": "sphere", "nu": 40, "nv": 28 },
+      "shading": {
+        "type": "blinn_phong",
+        "ka": [0.05, 0.12, 0.05],
+        "kd": [0.4, 0.8, 0.45],
+        "ks": [0.3, 0.3, 0.3],
+        "phong_exponent": 40
+      },
+      "transform": [
+        { "rotate_about_y": 0, "period": 6.5 },
+        { "translate": [2.4, -0.2, 0.0] },
+        { "scale": 0.24 }
+      ]
+    },
+    {
+      "name": "moon-outer",
+      "geometry": { "type": "sphere", "nu": 40, "nv": 28 },
+      "shading": {
+        "type": "blinn_phong",
+        "ka": [0.06, 0.06, 0.14],
+        "kd": [0.45, 0.5, 0.9],
+        "ks": [0.5, 0.5, 0.5],
+        "phong_exponent": 120
+      },
+      "transform": [
+        { "rotate_about_y": 0, "period": 11.0 },
+        { "translate": [3.3, 0.35, 0.0] },
+        { "scale": 0.3 }
+      ]
+    }
+  ]
+}

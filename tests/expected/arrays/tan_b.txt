@@ -1,0 +1,4 @@
+# tan_b
+# shape (3,), dtype float64, range [0, 2]
+#
+[2. 0. 0.]

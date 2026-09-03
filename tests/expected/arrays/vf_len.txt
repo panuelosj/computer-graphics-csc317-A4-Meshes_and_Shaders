@@ -1,0 +1,4 @@
+# vf_len
+# shape (6,), dtype int64, range [4, 4]
+#
+[4 4 4 4 4 4]

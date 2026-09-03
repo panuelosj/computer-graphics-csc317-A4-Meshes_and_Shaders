@@ -1,0 +1,4 @@
+# scale_s
+# shape (), dtype float64, range [2.5, 2.5]
+#
+2.5

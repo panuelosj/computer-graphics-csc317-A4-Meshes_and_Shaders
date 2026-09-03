@@ -1,0 +1,32 @@
+{
+  "name": "Planet and moon",
+  "description": "A procedurally shaded, bump-mapped planet with a small grey moon in orbit. The planet uses your open-ended planet_color; this is the scene main.py shows by default.",
+  "view": [0, 0, 1],
+  "camera": { "center": [0.0, -0.0001, 0.0], "extent": 2.53 },
+  "light": { "type": "orbiting", "period": 8.0, "elevation": 0.6 },
+  "objects": [
+    {
+      "name": "planet",
+      "geometry": { "type": "sphere", "nu": 96, "nv": 64 },
+      "shading": { "type": "planet", "bump": true },
+      "transform": []
+    },
+    {
+      "name": "moon",
+      "geometry": { "type": "sphere", "nu": 48, "nv": 32 },
+      "shading": {
+        "type": "blinn_phong",
+        "ka": [0.08, 0.08, 0.09],
+        "kd": [0.55, 0.55, 0.58],
+        "ks": [0.2, 0.2, 0.2],
+        "phong_exponent": 30,
+        "bump": true
+      },
+      "transform": [
+        { "rotate_about_y": 0, "period": 4.0 },
+        { "translate": [2.0, 0.0, 0.0] },
+        { "scale": 0.3 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+# sphere_check_nu
+# shape (), dtype int64, range [8, 8]
+#
+8

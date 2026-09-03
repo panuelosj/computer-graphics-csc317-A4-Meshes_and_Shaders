@@ -1,0 +1,77 @@
+{
+  "name": "Keyframed orbit",
+  "description": "A planet with a moon and a probe whose positions are given at a handful of key times and filled in between by your catmull_rom_interpolation. Keys are evenly spaced in time, and each path carries one wrap-around key at each end so the loop closes without a seam.",
+  "view": [0, 0.25, 1],
+  "camera": { "center": [-0.2346, 0.1994, -0.0499], "extent": 3.3926 },
+  "light": { "type": "orbiting", "period": 9.0, "elevation": 0.5 },
+  "objects": [
+    {
+      "name": "planet",
+      "geometry": { "type": "sphere", "nu": 88, "nv": 56 },
+      "shading": { "type": "procedural", "bump": true },
+      "transform": [{ "scale": 0.85 }]
+    },
+    {
+      "name": "moon",
+      "geometry": { "type": "sphere", "nu": 44, "nv": 30 },
+      "shading": {
+        "type": "blinn_phong",
+        "ka": [0.08, 0.08, 0.1],
+        "kd": [0.62, 0.62, 0.68],
+        "ks": [0.35, 0.35, 0.35],
+        "phong_exponent": 45
+      },
+      "transform": [
+        {
+          "_comment": "circular orbit tilted in y; t=-1 and t=9 are wrap keys",
+          "translate_keys": [
+            [-1.0, [ 1.55, -0.45, -1.55]],
+            [ 0.0, [ 2.20,  0.00,  0.00]],
+            [ 1.0, [ 1.55,  0.45,  1.55]],
+            [ 2.0, [ 0.00,  0.00,  2.20]],
+            [ 3.0, [-1.55, -0.45,  1.55]],
+            [ 4.0, [-2.20,  0.00,  0.00]],
+            [ 5.0, [-1.55,  0.45, -1.55]],
+            [ 6.0, [ 0.00,  0.00, -2.20]],
+            [ 7.0, [ 1.55, -0.45, -1.55]],
+            [ 8.0, [ 2.20,  0.00,  0.00]],
+            [ 9.0, [ 1.55,  0.45,  1.55]]
+          ],
+          "loop": 8.0
+        },
+        { "scale": 0.22 }
+      ]
+    },
+    {
+      "name": "probe",
+      "geometry": { "type": "sphere", "nu": 32, "nv": 22 },
+      "shading": {
+        "type": "blinn_phong",
+        "ka": [0.16, 0.06, 0.02],
+        "kd": [0.95, 0.45, 0.15],
+        "ks": [0.6, 0.6, 0.5],
+        "phong_exponent": 150
+      },
+      "transform": [
+        {
+          "_comment": "wider, eccentric loop; speed varies because the keys are unevenly spaced in SPACE, not in time",
+          "translate_keys": [
+            [-1.0, [-2.00,  0.30, -2.40]],
+            [ 0.0, [-3.20,  1.30, -1.00]],
+            [ 1.0, [-2.40,  0.90,  0.90]],
+            [ 2.0, [-0.60,  0.20,  1.90]],
+            [ 3.0, [ 1.30, -0.60,  1.40]],
+            [ 4.0, [ 2.70, -1.20, -0.30]],
+            [ 5.0, [ 2.10, -1.40, -2.10]],
+            [ 6.0, [ 0.20, -1.00, -3.00]],
+            [ 7.0, [-2.00,  0.30, -2.40]],
+            [ 8.0, [-3.20,  1.30, -1.00]],
+            [ 9.0, [-2.40,  0.90,  0.90]]
+          ],
+          "loop": 8.0
+        },
+        { "scale": 0.12 }
+      ]
+    }
+  ]
+}

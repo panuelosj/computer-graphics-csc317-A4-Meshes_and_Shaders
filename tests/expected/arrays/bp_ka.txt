@@ -1,0 +1,4 @@
+# bp_ka
+# shape (3,), dtype float64, range [0.2, 0.8]
+#
+[0.2 0.3 0.8]

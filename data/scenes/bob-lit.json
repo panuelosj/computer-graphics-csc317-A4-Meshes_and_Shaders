@@ -1,0 +1,21 @@
+{
+  "name": "Bob, lit",
+  "description": "A loaded .obj mesh, smoothed by two rounds of your catmull_clark and shaded with Blinn-Phong. Normals come from your per_vertex_normals, so this scene is a quick visual check of both functions.",
+  "view": [0, 0, 1],
+  "camera": { "center": [0.0, 0.0, 0.0], "extent": 1.0565 },
+  "light": { "type": "orbiting", "period": 7.0, "elevation": 0.5 },
+  "objects": [
+    {
+      "name": "bob",
+      "geometry": { "type": "obj", "path": "../bob.obj", "subdivide": 2 },
+      "shading": {
+        "type": "blinn_phong",
+        "ka": [0.1, 0.09, 0.05],
+        "kd": [0.85, 0.7, 0.3],
+        "ks": [0.6, 0.6, 0.55],
+        "phong_exponent": 200
+      },
+      "transform": [{ "rotate_about_y": 0, "period": 9.0 }]
+    }
+  ]
+}

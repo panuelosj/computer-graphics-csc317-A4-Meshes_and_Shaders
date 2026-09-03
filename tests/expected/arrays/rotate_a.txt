@@ -1,0 +1,4 @@
+# rotate_a
+# shape (), dtype float64, range [0.7, 0.7]
+#
+0.7

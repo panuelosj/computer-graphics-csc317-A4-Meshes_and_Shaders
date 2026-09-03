@@ -1,0 +1,4 @@
+# bp_p
+# shape (), dtype float64, range [50, 50]
+#
+50.0

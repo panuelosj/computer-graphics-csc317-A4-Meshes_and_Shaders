@@ -1,0 +1,18 @@
+{
+  "name": "Marble cube",
+  "description": "A cube smoothed by three rounds of Catmull-Clark subdivision, then painted with the procedural marble shader. Shows how subdivision and procedural colour interact.",
+  "view": [0, 0, 1],
+  "camera": { "center": [-0.0, 0.7, 0.0], "extent": 1.7618 },
+  "light": { "type": "fixed", "direction": [0.4, 0.8, 0.6] },
+  "objects": [
+    {
+      "name": "marble",
+      "geometry": { "type": "cube", "subdivide": 3 },
+      "shading": { "type": "procedural" },
+      "transform": [
+        { "rotate_about_y": 0, "period": 12.0 },
+        { "scale": 1.4 }
+      ]
+    }
+  ]
+}

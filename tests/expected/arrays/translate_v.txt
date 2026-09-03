@@ -1,0 +1,4 @@
+# translate_v
+# shape (3,), dtype float64, range [-2, 3]
+#
+[ 1. -2.  3.]
