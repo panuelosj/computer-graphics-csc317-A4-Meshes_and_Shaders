@@ -39,8 +39,9 @@ def tangent(N):
     """Build an orthonormal tangent frame ``(T, B)`` for unit normals ``N``.
 
     ``T`` is ``x = (1,0,0)`` projected onto the tangent plane and normalized;
-    ``B = N x T``. Where ``N`` is (nearly) parallel to ``x``, use ``y = (0,1,0)``
-    instead so the frame stays well-defined. Accept ``(3,)`` or ``(k, 3)``.
+    ``B = N x T``. Where ``N`` is (nearly) parallel to ``x`` (if |N·x| > 0.99), 
+    use ``y = (0,1,0)`` instead so the frame stays well-defined. 
+    Accept ``(3,)`` or ``(k, 3)``.
 
     Returns
     -------

@@ -31,7 +31,7 @@ def procedural_color(positions, normals, view, light):
     Recipe
     ------
     Implement exactly this composition (the unit checks compare against it;
-    with ``P = positions`` and ``perlin_noise`` your own implementation)::
+    with ``P = positions`` and ``perlin_noise``)::
 
         s  = sin(20 * (P[:, 1] + perlin_noise(P)))          # marble veins
         s2 = 0.25 * perlin_noise(1 * P) + 0.25 * perlin_noise(4 * P)

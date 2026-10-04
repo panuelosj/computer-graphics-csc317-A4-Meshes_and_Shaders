@@ -396,7 +396,7 @@ def check_catmull_rom_interpolation():
 def get_checks():
     """Return the ordered list of checks for this assignment."""
     return [
-        # Part 1: meshes (60)
+        # Part 1: meshes (57)
         Check("write_obj", 7, check_write_obj, "writes valid 1-indexed .obj files"),
         Check("cube", 7, check_cube, "8-vertex / 6-quad unit cube"),
         Check("sphere", 7, check_sphere, "lat-long quad sphere on the unit sphere"),
@@ -406,7 +406,7 @@ def get_checks():
         Check("vertex_triangle_adjacency", 6, check_vertex_triangle_adjacency, "incident faces per vertex"),
         Check("per_corner_normals", 5, check_per_corner_normals, "crease-aware corner normals"),
         Check("catmull_clark", 5, check_catmull_clark, "Catmull-Clark quad subdivision"),
-        # Part 2: software shaders (40)
+        # Part 2: software shaders (43)
         Check("model_view_projection", 7, check_model_view_projection, "MVP transform matrices"),
         Check("blinn_phong", 7, check_blinn_phong, "Blinn-Phong shading"),
         Check("smooth_step", 5, check_smooth_step, "cubic + quintic smooth-step"),

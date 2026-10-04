@@ -148,7 +148,7 @@ python check_my_work.py              # scores your implementation
 
 `run_tests.py` tells you *what* is broken. `check_my_work.py` runs the same
 checks but reports them as marks per function, so you can see where you stand
-before submitting. Keep going until you see `Validated 15/15`. Note that the 
+before submitting. Keep going until you see `Validated 16/16`. Note that the 
 function only marks it against the public unit tests, we will also validate 
 against internal examples that are not released in this repo. 
 
@@ -169,7 +169,7 @@ g["<name>"]           # one of them
 
 **Scenes.** Everything below is built and shaded by your own functions —
 geometry from `sphere`/`cube`/`catmull_clark`, placement from your
-matrices, colour from `procedural_color` and `blinn_phong`. Run them with
+matrices, colour from `procedural_color`, `blinn_phong`, and `planet_color`. Run them with
 `python main.py --scene <name>`:
 
 | `planet-and-moon` | `three-moons` |
@@ -430,8 +430,8 @@ vertex shader does. The y-axis rotation matrix is
 
 ### Blinn-Phong shading
 
-Given a material (`ka`, `kd`, `ks`, exponent `p`), a unit surface normal `n`, a
-unit view direction `v` and a unit light direction `l`, with a white light of
+Given a material (`ka`, `kd`, `ks`, exponent `p`), a surface normal `n`, a
+view direction `v` and a light direction `l`, with a white light of
 low ambient intensity `Ia = 0.1`, the Blinn-Phong colour is
 
     color = ka·Ia
@@ -572,7 +572,7 @@ looking at.
 
 **Total: 100 marks** (Part 1: 57, Part 2: 43).
 
-> **Tip:** `procedural_color` and `bump_mapping` build on `blinn_phong` and on
+> **Tip:** `procedural_color` builds on `blinn_phong` and on
 > the provided `perlin_noise`; the normal functions depend on
 > `triangle_area_normal`. Implement the dependencies first.
 
@@ -633,7 +633,7 @@ steps and how to animate them, and which of your functions each one calls.
 
 Your `src/*.py` files are graded by the same unit checks you run locally, mapped
 to the marks above, as well as additional internal examples. Submit only your 
-`src/` directory (all the `.py` files inside the folder). Do not modify `tests/`.
+`src/` directory (all the `.py` files inside the folder), and your bonus `.json` file. Do not modify `tests/`.
 
 The one exception is `planet_color`, which is open-ended: its automatic check
 confirms only that you attempted it, and the rest of its marks come from a

@@ -20,7 +20,7 @@ def blinn_phong(ka, kd, ks, p, n, v, l):
     p : float
         Specular exponent (shininess).
     n, v, l : array_like
-        Unit surface normal, view and light directions.
+        Surface normal, view and light directions.
 
     Returns
     -------

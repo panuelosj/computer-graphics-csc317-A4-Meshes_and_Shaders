@@ -5,7 +5,7 @@ vertex_triangle_adjacency, per_vertex_normals, per_corner_normals, cube,
 sphere, write_obj, catmull_clark.
 
 Part 2 (software shaders): model_view_projection, blinn_phong, smooth_step,
-procedural_color, bump_mapping.
+procedural_color, bump_mapping, catmull_rom_interpolation, planet_color.
 
 Gradient noise is provided for you in ``backend/noise.py`` -- import it with
 ``from backend.noise import perlin_noise``.
